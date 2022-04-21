@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 500px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        border: 1px solid black;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr>
+          <td>Số tiền vay</td>
+          <td id="ket-qua"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+  <script>
+    let money = +prompt("Số tiền vay: ");
+    let rate = prompt("Lãi xuất: ");
+    let year = prompt("Số năm vay: ");
+    let moneyLast = money + ((money * rate) / 100) * year;
+
+    document.getElementById("ket-qua").innerText = moneyLast;
+  </script>
+</html>
